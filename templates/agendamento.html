@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Horário</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Agendar Horário</h1>
+        <form action="/agendarHorario" method="POST">
+            <label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="usario_id" name="usuario_id" required>
+
+            <label for="horario">Horário:</label>
+            <input type="time" id="data_hora" name="data_hora" required>
+
+            <label for="dia">Dia:</label>
+            <input type="date" id="dia" name="dia" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+
+        {% if mensagem %}
+            <p>{{ mensagem }}</p>
+        {% endif %}
+
+        <a href="/" class="btn">Voltar para Home</a>
+    </div>
+</body>
+</html>

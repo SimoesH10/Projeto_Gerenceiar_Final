@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recuperação de Senha</h1>
+        <form action="/recuperarSenha" method="POST">
+            <label for="nomeUsuario">Nome:</label>
+            <input type="text" id="nomeUsuario" name="nomeUsuario" required>
+
+            <label for="loginUsuario">Login:</label>
+            <input type="text" id="loginUsuario" name="loginUsuario" required>
+
+            <button type="submit">Recuperar Senha</button>
+        </form>
+
+        {% if mensagem %}
+            <p>{{ mensagem }}</p>
+        {% endif %}
+
+        <a href="/" class="btn">Voltar para Home</a>
+    </div>
+</body>
+</html>

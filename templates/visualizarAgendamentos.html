@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Agendamentos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizar Agendamentos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Cliente</th>
+                    <th>Horário</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for horario in horarios %}
+                    <tr>
+                        <td>{{ agendamento[0] }}</td>
+                        <td>{{ agendamento[1] }}</td>
+                        <td>{{ agendamento[2] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn">Voltar para Home</a>
+        <a href="/paginaAgendamento" class="btn">Agendar Horário</a>
+    </div>
+</body>
+</html>
